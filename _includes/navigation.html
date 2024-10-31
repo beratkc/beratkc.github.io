@@ -1,17 +1,20 @@
-<div class="navbar bg-base-100">
-    <div class="flex-1">
-      <a class="btn btn-ghost text-xl" href="/">beratkc</a>
-    </div>
-    <div class="flex-none">
-      <ul class="menu menu-horizontal px-1">
-        {% for item in site.data.navigation %}
-          <li>
-            <a href="{{ item.link }}" {% if page.url == item.link %}class="text-red-500"{% endif %}>
-              {{ item.name }}
-            </a>
-          </li>
-        {% endfor %}
-        
-      </ul>
-    </div>
+<header class="navbar max-w-2xl mx-auto">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl title" href="/">beratkc</a>
   </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.link }}" {% if page.url == item.link %}class="text-primary"{% endif %}>
+            {{ item.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <!--
+    <div class="divider lg:divider-horizontal h-10"></div>
+    <input type="checkbox" value="light" class="toggle theme-controller" /> 
+  -->
+  </div>
+</header>

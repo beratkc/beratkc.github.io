@@ -1,13 +1,82 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html data-theme="night">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/daisyui.css">
+    <link rel="stylesheet" href="/assets/daisyui.css" />
     <script src="/assets/tailwindcss.js"></script>
+    <style>
+      .title {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, #00b4d8, #caf0f8);
+      }
+    </style>
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div class="flex w-full h-full min-h-full">
+      <div class="relative flex w-full h-full flex-col">
+        <div
+          class="fixed inset-0 mx-0 max-w-none overflow-hidden hidden md:block"
+        >
+          <div
+            class="absolute left-1/2 top-[-14.5px] ml-[-41.5rem] h-[25rem] w-full dark:[mask-image:linear-gradient(white,transparent)]"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-indigo-600 to-indigo-100 opacity-40 [mask-image:radial-gradient(farthest-side_at_top,white,transparent)] dark:from-indigo-500/30 dark:to-indigo-800/30 dark:opacity-100"
+            >
+              <svg
+                aria-hidden="true"
+                class="absolute -inset-y-1/2 inset-x-0 h-[200%] w-full skew-x-[18deg] fill-white/10 stroke-transparent mix-blend-overlay dark:fill-black/20"
+              >
+                <defs>
+                  <pattern
+                    id=":S2:"
+                    width="72"
+                    height="56"
+                    patternUnits="userSpaceOnUse"
+                    x="-12"
+                    y="4"
+                  >
+                    <path d="M.5 56V.5H72" fill="none"></path>
+                  </pattern>
+                </defs>
+                <rect
+                  width="100%"
+                  height="100%"
+                  stroke-width="0"
+                  fill="url(#:S2:)"
+                ></rect>
+              </svg>
+            </div>
+            <svg
+              viewBox="0 0 1113 440"
+              aria-hidden="true"
+              class="absolute left-1/2 top-0 ml-[-19rem] w-[69.5625rem] fill-white dark:fill-zinc-950 blur-[26px]"
+            >
+              <path
+                d="M.016 439.5s-9.5-300 434-300S882.516 20 882.516 20V0h230.004v439.5H.016Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="relative flex w-full flex-col">
+          {% include navigation.html %}
+          <div class="flex-auto min-h-[50rem] mt-12">
+            <div class="sm:px-8 mt-9">
+              <div class="mx-auto w-full max-w-4xl lg:px-8">
+                <div class="relative px-4 sm:px-8 lg:px-12">
+                  <div class="mx-auto max-w-2xl lg:max-w-2xl">
+                    {{content}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% include footer.html %}
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,4 +1,6 @@
 - name: Anasayfa
   link: /
-- name: Hakkımda
-  link: /about.html
+- name: Projelerim
+  link: /projects.html
+- name: Notlarım
+  link: /notes.html
