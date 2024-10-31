@@ -1,0 +1,4 @@
+- name: Anasayfa
+  link: /
+- name: Hakkımda
+  link: /about.html
